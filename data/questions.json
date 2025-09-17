@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "Declare a constant for the speed of light in JavaScript.",
+    "answer": "const SPEED_OF_LIGHT = 299792458;"
+  },
+  {
+    "id": 2,
+    "question": "Create a simple 'Hello, World!' function in Python.",
+    "answer": "def hello_world():\n  print(\"Hello, World!\")"
+  },
+  {
+    "id": 3,
+    "question": "Write a basic CSS rule to make all paragraphs red.",
+    "answer": "p {\n  color: red;\n}"
+  },
+  {
+    "id": 4,
+    "question": "Define a React functional component named 'Welcome'.",
+    "answer": "const Welcome = () => {\n  return <h1>Hello, User!</h1>;\n};"
+  },
+  {
+    "id": 5,
+    "question": "Write a SQL query to select all users from a 'users' table.",
+    "answer": "SELECT * FROM users;"
+  }
+]
