@@ -50,7 +50,7 @@ const TypingArea = ({ correctAnswer }: Props) => {
 
   const renderText = () => {
     return correctAnswer.split('').map((char, index) => {
-      let color = 'text-gray-500'; 
+      let color = 'text-black-400'; 
       if (index < userInput.length) {
         color = char === userInput[index] ? 'text-green-400' : 'text-red-500';
       }
@@ -63,9 +63,9 @@ const TypingArea = ({ correctAnswer }: Props) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <div
-        className="font-mono text-xl p-4 bg-[#282a36] rounded-md tracking-wider leading-relaxed whitespace-pre-wrap"
+        className=" mt-12 font-mono text-xl p-4 bg-white rounded-md tracking-wider leading-relaxed whitespace-pre-wrap"
         onClick={() => inputRef.current?.focus()}
       >
         {renderText()}

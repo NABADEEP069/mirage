@@ -14,8 +14,8 @@ interface Props {
 
 const QuestionList = ({ questions, selectedQuestionId, onSelectQuestion }: Props) => {
   return (
-    <div className="w-1/3 bg-[#21222c] p-4 rounded-lg shadow-lg overflow-y-auto">
-      <h2 className="text-lg font-semibold mb-4 text-gray-200">All Questions</h2>
+    <div className="w-1/3 bg-white p-4 rounded-lg shadow-lg overflow-y-auto">
+      <h2 className="text-lg text-center font-semibold mb-4 text-gray-200">Your Questions</h2>
       <ul>
         {questions.map((q) => (
           <li
@@ -23,8 +23,8 @@ const QuestionList = ({ questions, selectedQuestionId, onSelectQuestion }: Props
             onClick={() => onSelectQuestion(q.id)}
             className={`p-3 rounded-md cursor-pointer transition-colors duration-200 ${
               selectedQuestionId === q.id
-                ? 'bg-cyan-500/30 text-cyan-300'
-                : 'hover:bg-gray-700'
+                ? 'bg-yellow-300 text-black'
+                : 'hover:wheat-700'
             }`}
           >
             {q.question}
