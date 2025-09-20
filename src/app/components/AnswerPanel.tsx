@@ -17,16 +17,16 @@ const AnswerPanel = ({ question }: Props) => {
 
   if (!question) {
     return (
-      <div className=" bg-black p-6 rounded-lg shadow-lg flex items-center justify-center">
-        <p className="text-gray-400 text-lg">Select a question to start practicing!</p>
+      <div className="w-full md:w-2/3 bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg flex items-center justify-center">
+        <p className="text-gray-500 dark:text-gray-400 text-lg">Select a question to start practicing!</p>
       </div>
     );
   }
 
   return (
-    <div className=" bg-white p-6 rounded-lg shadow-lg flex flex-col gap-6">
+    <div className="w-full md:w-2/3 bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col gap-6">
       <div>
-        <h3 className="font-mono text-lg text-gray-300 mb-2">
+        <h3 className="font-mono text-lg text-gray-500 dark:text-gray-400 mb-2">
           {question.question}
         </h3>
         <TypingArea correctAnswer={question.answer} />
@@ -39,7 +39,7 @@ const AnswerPanel = ({ question }: Props) => {
           {showAnswer ? 'Hide Answer' : 'Show Answer'}
         </button>
         {showAnswer && (
-          <pre className="bg-[#282a36] p-4 rounded-md mt-4 whitespace-pre-wrap">
+          <pre className="bg-gray-800 dark:bg-gray-950 p-4 rounded-md mt-4 whitespace-pre-wrap">
             <code className="text-green-400">{question.answer}</code>
           </pre>
         )}

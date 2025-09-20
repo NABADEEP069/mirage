@@ -48,20 +48,21 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="container mx-auto p-6 flex flex-col gap-2 ">
-        <div className="flex-grow flex gap-6 py-1">
-          <QuestionList
-            questions={questions}
-            selectedQuestionId={selectedQuestion?.id || null}
-            onSelectQuestion={handleSelectQuestion}
-          />
-          <AnswerPanel question={selectedQuestion} />
-        </div>
-        <VirtualKeyboard activeKey={activeKey} />
-        <Footer/>
-      </main>
+   <div className="min-h-screen flex flex-col">
+  <Navbar />
+  <main className="container mx-auto p-6 flex flex-col gap-2 mt-9">
+    <div className="flex-grow flex flex-col md:flex-row gap-6 py-1">
+      <QuestionList
+        questions={questions}
+        selectedQuestionId={selectedQuestion?.id || null}
+        onSelectQuestion={handleSelectQuestion}
+      />
+      <AnswerPanel question={selectedQuestion} />
     </div>
+    <VirtualKeyboard activeKey={activeKey} />
+    <Footer />
+  </main>
+</div>
+
   );
 }
